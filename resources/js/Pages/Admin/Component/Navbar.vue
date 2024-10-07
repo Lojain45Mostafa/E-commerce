@@ -758,10 +758,13 @@
                         aria-labelledby="dropdown"
                     >
                         <li>
-                            <a
-                                href="#"
-                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                                >Sign out</a
+                            <Link
+                                :href="route('logout')"
+                                method="post"
+                                as="button"
+                                class="block cursor-pointer py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                            >
+                                Sign out</Link
                             >
                         </li>
                     </ul>
@@ -770,3 +773,6 @@
         </div>
     </nav>
 </template>
+<script setup>
+import { Link } from "@inertiajs/vue3";
+</script>
