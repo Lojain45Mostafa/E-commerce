@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminAuthController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Middleware\Admin;
 use App\Http\Middleware\redirectAdmin;
 use Illuminate\Foundation\Application;
@@ -42,6 +43,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'redirectAadmin'], function (
 
 Route::middleware('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+
+    //product routes
+    Route::get('/products', [ProductController::class, 'index'])->name('admin.products.index');
 });
 
 //end

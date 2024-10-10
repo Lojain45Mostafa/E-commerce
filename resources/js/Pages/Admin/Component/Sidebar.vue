@@ -1,3 +1,6 @@
+<script setup>
+import { Link } from "@inertiajs/vue3";
+</script>
 <template>
     <aside
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
@@ -35,8 +38,8 @@
             </form>
             <ul class="space-y-2">
                 <li>
-                    <a
-                        href="#"
+                    <Link
+                        :href="route('admin.dashboard')"
                         class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                     >
                         <svg
@@ -53,8 +56,8 @@
                                 d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"
                             ></path>
                         </svg>
-                        <span class="ml-3">Overview</span>
-                    </a>
+                        <span class="ml-3">Dashboard</span>
+                    </Link>
                 </li>
                 <li>
                     <button
@@ -95,29 +98,29 @@
                     </button>
                     <ul id="dropdown-pages" class="hidden py-2 space-y-2">
                         <li>
-                            <a
-                                href="#"
+                            <Link
+                                :href="route('admin.products.index')"
                                 class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                >Settings</a
+                                >Product</Link
                             >
                         </li>
                         <li>
                             <a
                                 href="#"
                                 class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                >Kanban</a
+                                >Brand</a
                             >
                         </li>
                         <li>
                             <a
                                 href="#"
                                 class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                >Calendar</a
+                                >Category</a
                             >
                         </li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <button
                         type="button"
                         class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -270,7 +273,7 @@
                             >
                         </li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
             <ul
                 class="pt-5 mt-5 space-y-2 border-t border-gray-200 dark:border-gray-700"
